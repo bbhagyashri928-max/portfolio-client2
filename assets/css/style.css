@@ -1399,88 +1399,43 @@ button {
 }
 
 /* ==========================================================================
-   10. FOOTER BAR
+   10. FOOTER BAR (CLEAN INCUBATION CENTRE DESIGN CREDIT)
    ========================================================================== */
 .site-footer-bar {
   background: var(--bg-footer);
   color: #FFFFFF;
-  padding: 3.5rem 0 2rem 0;
+  padding: 2.5rem 0;
   border-top: 4px solid #00796B;
 }
 
-.footer-top-row {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: 2rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1.75rem;
-}
-
-.footer-brand-logo {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 1rem;
-}
-
-.footer-logo-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  flex-shrink: 0;
-}
-
-.footer-brand-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-.footer-brand-sub {
-  font-size: 0.8rem;
-  color: #80CBC4;
-}
-
-.footer-col-head {
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #80CBC4;
-  margin-bottom: 1.25rem;
-}
-
-.footer-nav-links {
+.footer-centered-wrap {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  list-style: none;
-}
-
-.footer-nav-link {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.75);
-  transition: color var(--transition-smooth);
-}
-
-.footer-nav-link:hover {
-  color: #FFFFFF;
-}
-
-.footer-bottom-copy {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  gap: 10px;
+}
+
+.incubation-credit {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.incubation-credit span {
+  color: #E0F2F1;
+}
+
+.footer-copyright-sub {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* ==========================================================================

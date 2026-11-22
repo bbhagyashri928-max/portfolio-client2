@@ -15,11 +15,11 @@ A modern, attractive, and authentic academic and clinical leadership portfolio f
 - **College**: Government B.Sc. Nursing College, General Hospital, Jalna
 - **Department**: Public Health Department, Government of Maharashtra
 - **University Affiliation**: Maharashtra University of Health Sciences (MUHS), Nashik
-- **Leadership & Specialization**:
-  - **Master of Science**: Medical Surgical Nursing (Oncology)
-  - **Clinical Expertise**: Surgical Critical Care, Oncology Nursing & Telemetry
-  - **Student Leadership**: President, Student Welfare Association (SWA)
-  - **Educational Experience**: 20+ Years in Nursing Leadership & Mentorship
+- **Institutional Codes**:
+  - **MUHS Code**: 154153
+  - **CET Cell Code**: 09385
+  - **AISHE Code**: C-74466
+  - Recognized by **Indian Nursing Council (INC)** & **Maharashtra Nursing Council (MNC)**
 - **Campus Address**: Government B.Sc. Nursing College, General Hospital Jalna, Opposite Collector Office, Jalna, Pin – 431203, Maharashtra, India
 - **Contact**:
   - **Landline**: 02482-299160
