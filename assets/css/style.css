@@ -56,7 +56,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -74,7 +76,7 @@ body {
   line-height: 1.68;
   overflow-x: hidden;
   position: relative;
-  background-image: 
+  background-image:
     radial-gradient(circle at 6% 12%, #FFF0E6 0%, transparent 40%),
     radial-gradient(circle at 94% 38%, #EFEAFF 0%, transparent 35%),
     radial-gradient(circle at 8% 72%, #E0F2F1 0%, transparent 40%),
@@ -94,7 +96,10 @@ img {
   display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   color: inherit;
 }
@@ -319,7 +324,8 @@ button {
   white-space: nowrap;
 }
 
-.nav-item-link:hover, .nav-item-link.active {
+.nav-item-link:hover,
+.nav-item-link.active {
   color: var(--primary);
 }
 
@@ -336,7 +342,8 @@ button {
   transition: width var(--transition-smooth);
 }
 
-.nav-item-link:hover::after, .nav-item-link.active::after {
+.nav-item-link:hover::after,
+.nav-item-link.active::after {
   width: 100%;
 }
 
@@ -376,7 +383,7 @@ button {
   padding-top: clamp(2.5rem, 5vw, 4.5rem);
   padding-bottom: clamp(4rem, 7vw, 6rem);
   overflow: hidden;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 42%, rgba(255, 255, 255, 0.35) 75%, rgba(255, 255, 255, 0.12) 100%),
     url('../images/college_campus_bg.jpg');
   background-size: cover;
@@ -522,8 +529,15 @@ button {
 }
 
 @keyframes floatGentle {
-  0%, 100% { transform: translateY(0px) rotate(1deg); }
-  50% { transform: translateY(-8px) rotate(-1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
 }
 
 .doodle-cap {
@@ -732,8 +746,13 @@ button {
 }
 
 @keyframes pulseBlob {
-  0% { transform: scale(0.96) rotate(0deg); }
-  100% { transform: scale(1.04) rotate(10deg); }
+  0% {
+    transform: scale(0.96) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(1.04) rotate(10deg);
+  }
 }
 
 .features-stack {
@@ -914,7 +933,8 @@ button {
   transition: transform var(--transition-smooth);
 }
 
-.circle-card-vision:hover, .circle-card-mission:hover {
+.circle-card-vision:hover,
+.circle-card-mission:hover {
   transform: scale(1.03);
 }
 
@@ -1268,7 +1288,8 @@ button {
   margin-bottom: 12px;
 }
 
-.contact-text-input, .contact-textarea {
+.contact-text-input,
+.contact-textarea {
   width: 100%;
   padding: 12px 16px;
   background: var(--bg-body);
@@ -1280,7 +1301,8 @@ button {
   transition: all var(--transition-smooth);
 }
 
-.contact-text-input:focus, .contact-textarea:focus {
+.contact-text-input:focus,
+.contact-textarea:focus {
   border-color: var(--primary);
   background: #FFFFFF;
   box-shadow: 0 0 0 3px rgba(112, 82, 255, 0.12);
@@ -1536,9 +1558,11 @@ button {
   .nav-links-list {
     gap: 0.95rem;
   }
+
   .nav-item-link {
     font-size: 0.85rem;
   }
+
   .nav-contact-beside-btn {
     padding: 8px 16px;
     font-size: 0.82rem;
@@ -1547,50 +1571,62 @@ button {
 
 @media (max-width: 1024px) {
   .hero-wrapper {
-    background-image: 
+    background-image:
       linear-gradient(to bottom, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0.5) 100%),
       url('../images/college_campus_bg.jpg');
     background-position: center top;
   }
+
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .hero-motto-callout {
     text-align: left;
   }
+
   .hero-cta-group {
     justify-content: center;
   }
+
   .message-container-card {
     grid-template-columns: 1fr;
   }
+
   .message-profile-card {
     position: static;
     max-width: 450px;
     margin: 0 auto;
   }
+
   .about-section-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .about-center-circle {
     margin: 1.5rem 0;
   }
+
   .milestones-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .milestones-text-col .section-subtext {
     margin-left: auto;
     margin-right: auto;
   }
+
   .vision-choose-grid {
     grid-template-columns: 1fr;
   }
+
   .contact-3col-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-top-row {
     grid-template-columns: 1fr 1fr;
   }
@@ -1613,35 +1649,43 @@ button {
     transition: all var(--transition-smooth);
     align-items: flex-start;
   }
+
   .nav-menu-wrapper.mobile-show {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
+
   .nav-links-list {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     width: 100%;
   }
+
   .nav-contact-beside-btn {
     margin-left: 0;
     margin-top: 0.5rem;
     width: 100%;
     justify-content: center;
   }
+
   .mobile-nav-toggle {
     display: block;
   }
+
   .stats-cards-row {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .achievements-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .testimonials-cards-row {
     grid-template-columns: 1fr;
   }
+
   .why-choose-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1653,16 +1697,20 @@ button {
     flex-direction: column;
     gap: 1.5rem;
   }
-  .circle-card-vision, .circle-card-mission {
+
+  .circle-card-vision,
+  .circle-card-mission {
     position: static;
     width: 100%;
     max-width: 300px;
     height: 300px;
   }
+
   .hero-sunburst-badge {
     top: 10px;
     right: 10px;
   }
+
   .footer-top-row {
     grid-template-columns: 1fr;
   }
@@ -1672,12 +1720,15 @@ button {
   .achievements-cards-grid {
     grid-template-columns: 1fr;
   }
+
   .stats-cards-row {
     grid-template-columns: 1fr;
   }
+
   .why-choose-cards-grid {
     grid-template-columns: 1fr;
   }
+
   .form-inputs-row-2 {
     grid-template-columns: 1fr;
   }
