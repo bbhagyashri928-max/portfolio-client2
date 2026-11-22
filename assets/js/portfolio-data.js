@@ -74,7 +74,7 @@ const PORTFOLIO_DATA = {
       id: "ethics",
       title: "Ethics, Empathy & Leadership",
       desc: "Nurturing compassionate bedside dignity, ethical conscience, and dynamic Student Welfare Association (SWA) leadership.",
-      color: "#26A69A",
+      color: "#7052FF",
       icon: "shield"
     }
   ],

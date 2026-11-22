@@ -1,7 +1,7 @@
 /* ==========================================================================
    PRINCIPAL PORTFOLIO - MR. MANOJ L. DESHMUKH
    Government B.Sc. Nursing College, General Hospital, Jalna
-   Educational Aesthetic: Soft Lavender, Warm Peach, Clean Pastel Cards, Teal Accents
+   Educational Aesthetic: Soft Lavender, Sunset Coral, Warm Amber & Royal Midnight Indigo
    ========================================================================== */
 
 :root {
@@ -18,19 +18,18 @@
   --secondary-subtle: #FFF3EE;
   --secondary-border: #FFE0D2;
 
-  --accent-teal: #00796B;
-  --accent-teal-dark: #004D40;
-  --accent-teal-subtle: #E0F2F1;
+  --accent-indigo: #2A1B63;
+  --accent-coral: #FF7A50;
   --accent-peach: #FFA570;
-  --accent-mint: #26A69A;
+  --accent-amber: #FFA726;
   --accent-gold: #FFB300;
 
   --bg-body: #FAF9FF;
   --bg-card: #FFFFFF;
   --bg-section-alt: #F6F4FE;
-  --bg-footer: #0D2833;
+  --bg-footer: #140E36; /* Deep Royal Midnight Indigo */
 
-  --text-main: #142833;
+  --text-main: #140E36;
   --text-body: #475569;
   --text-muted: #8E9BAE;
   --text-light: #FFFFFF;
@@ -79,7 +78,7 @@ body {
   background-image:
     radial-gradient(circle at 6% 12%, #FFF0E6 0%, transparent 40%),
     radial-gradient(circle at 94% 38%, #EFEAFF 0%, transparent 35%),
-    radial-gradient(circle at 8% 72%, #E0F2F1 0%, transparent 40%),
+    radial-gradient(circle at 8% 72%, #F3E5F5 0%, transparent 40%),
     radial-gradient(circle at 92% 88%, #FFF2EB 0%, transparent 35%);
   background-attachment: fixed;
 }
@@ -174,11 +173,11 @@ button {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: var(--radius-full);
-  background: #E8F5E9;
-  border: 1px solid #C8E6C9;
-  color: #1B5E20;
+  background: rgba(112, 82, 255, 0.08);
+  border: 1px solid rgba(112, 82, 255, 0.22);
+  color: #5335E8;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -421,7 +420,7 @@ button {
 .hero-principal-designation {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--accent-teal);
+  color: #5335E8;
   margin-bottom: 0.35rem;
 }
 
@@ -572,8 +571,8 @@ button {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0, 77, 64, 0.12);
-  border: 1px solid #E0F2F1;
+  box-shadow: 0 16px 40px rgba(28, 20, 68, 0.12);
+  border: 1px solid rgba(112, 82, 255, 0.15);
   position: sticky;
   top: 100px;
 }
@@ -594,7 +593,7 @@ button {
 }
 
 .message-teal-banner {
-  background: #004D40;
+  background: linear-gradient(135deg, #1C1444 0%, #2A1B63 50%, #4B36D1 100%);
   color: #FFFFFF;
   padding: 1.25rem 1.5rem;
   text-align: center;
@@ -609,7 +608,7 @@ button {
 
 .message-teal-role {
   font-size: 0.86rem;
-  color: #80CBC4;
+  color: #FFB74D;
   font-weight: 600;
   margin-bottom: 0.2rem;
 }
@@ -645,13 +644,13 @@ button {
 }
 
 .lead-quote-box {
-  border-left: 4px solid #004D40;
-  padding: 1rem 1.5rem;
-  background: #F0FDF4;
+  border-left: 4px solid #7052FF;
+  padding: 1.15rem 1.6rem;
+  background: #F8F6FF;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-style: italic;
   font-size: 1.08rem;
-  color: #142833;
+  color: #1E1743;
   margin-bottom: 1.75rem;
   line-height: 1.65;
 }
@@ -667,9 +666,11 @@ button {
 }
 
 .conviction-callout-box {
-  border-left: 4px solid #00796B;
-  padding: 1.25rem 1.5rem;
-  background: #E0F2F1;
+  border-left: 5px solid #FF7A50;
+  padding: 1.25rem 1.6rem;
+  background: linear-gradient(135deg, #FFF5F0 0%, #F5F2FF 100%);
+  border: 1px solid #FFE4D6;
+  border-left: 5px solid #FF7A50;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   margin: 1rem 0 1.5rem 0;
 }
@@ -677,15 +678,17 @@ button {
 .conviction-prefix {
   font-style: italic;
   font-size: 0.95rem;
-  color: #004D40;
+  color: #E65100;
   margin-bottom: 4px;
+  font-weight: 600;
 }
 
 .conviction-motto {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 800;
-  color: #004D40;
+  color: #140E36;
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .message-signoff {
@@ -740,7 +743,7 @@ button {
   width: 310px;
   height: 310px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #FFE2D4 0%, #E0F2F1 50%, #E9DEFF 100%);
+  background: linear-gradient(135deg, #FFE2D4 0%, #F3E8FF 50%, #E9DEFF 100%);
   z-index: 0;
   animation: pulseBlob 8s ease-in-out infinite alternate;
 }
@@ -1324,9 +1327,9 @@ button {
 
 .form-status-alert.active-success {
   display: block;
-  background: #E8F5E9;
-  border: 1px solid #A5D6A7;
-  color: #2E7D32;
+  background: #F4F1FF;
+  border: 1px solid #D1C4E9;
+  color: #5335E8;
 }
 
 .contact-details-col {
@@ -1405,7 +1408,7 @@ button {
   background: var(--bg-footer);
   color: #FFFFFF;
   padding: 2.5rem 0;
-  border-top: 4px solid #00796B;
+  border-top: 4px solid var(--primary);
 }
 
 .footer-centered-wrap {
@@ -1430,7 +1433,7 @@ button {
 }
 
 .incubation-credit span {
-  color: #E0F2F1;
+  color: #FFA726;
 }
 
 .footer-copyright-sub {
