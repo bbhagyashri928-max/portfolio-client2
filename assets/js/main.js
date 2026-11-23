@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialSlider();
   initAchievementsLightbox();
   initContactForm();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -20,7 +21,50 @@ function initNavbar() {
   const navbar = document.querySelector('.site-navbar');
   const toggleBtn = document.querySelector('.mobile-nav-toggle');
   const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
+  const navBackdrop = document.getElementById('nav-backdrop');
   const navLinks = document.querySelectorAll('.nav-item-link');
+  const getInTouchBtn = document.querySelector('.nav-contact-beside-btn');
+
+  function openMenu() {
+    navMenuWrapper?.classList.add('mobile-show');
+    toggleBtn?.classList.add('is-active');
+    toggleBtn?.setAttribute('aria-expanded', 'true');
+    navBackdrop?.classList.add('active');
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMenu() {
+    navMenuWrapper?.classList.remove('mobile-show');
+    toggleBtn?.classList.remove('is-active');
+    toggleBtn?.setAttribute('aria-expanded', 'false');
+    navBackdrop?.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  if (toggleBtn && navMenuWrapper) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (navMenuWrapper.classList.contains('mobile-show')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    navBackdrop?.addEventListener('click', closeMenu);
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    getInTouchBtn?.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenuWrapper.classList.contains('mobile-show')) {
+        closeMenu();
+      }
+    });
+  }
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
@@ -47,24 +91,7 @@ function initNavbar() {
         });
       }
     });
-  });
-
-  if (toggleBtn && navMenuWrapper) {
-    toggleBtn.addEventListener('click', () => {
-      navMenuWrapper.classList.toggle('mobile-show');
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenuWrapper.classList.remove('mobile-show');
-      });
-    });
-
-    const getInTouchBtn = document.querySelector('.nav-contact-beside-btn');
-    getInTouchBtn?.addEventListener('click', () => {
-      navMenuWrapper.classList.remove('mobile-show');
-    });
-  }
+  }, { passive: true });
 }
 
 /* ==========================================================================
@@ -153,6 +180,27 @@ function initTestimonialSlider() {
     updateSlider(currentIndex);
   });
 
+  // Touch swipe gesture support for mobile devices
+  const sliderContainer = document.querySelector('.testimonials-cards-row');
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  sliderContainer?.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  sliderContainer?.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 45) {
+      if (diff > 0) {
+        updateSlider(currentIndex + 1); // Swiped left -> next
+      } else {
+        updateSlider(currentIndex - 1); // Swiped right -> prev
+      }
+    }
+  }, { passive: true });
+
   updateSlider(0);
 }
 
@@ -232,4 +280,27 @@ function initContactForm() {
       }, 1000);
     });
   }
+}
+
+/* ==========================================================================
+   6. FLOATING SCROLL-TO-TOP BUTTON
+   ========================================================================== */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (!backToTopBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 }

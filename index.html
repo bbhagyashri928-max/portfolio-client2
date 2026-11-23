@@ -86,15 +86,16 @@
       </div>
 
       <!-- Mobile Hamburger Toggle -->
-      <button class="mobile-nav-toggle" aria-label="Toggle mobile menu">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button class="mobile-nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
       </button>
 
     </div>
+    
+    <!-- Mobile Navigation Drawer Backdrop -->
+    <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
   </header>
 
   <main>
@@ -901,7 +902,9 @@
                 <div>
                   <div class="contact-item-title">College Address</div>
                   <div class="contact-item-val">
-                    Government B.Sc. Nursing College, General Hospital Jalna, Opposite Collector Office, Jalna, Pin &ndash; 431203, Maharashtra
+                    <a href="https://maps.google.com/?q=Government+B.Sc.+Nursing+College+General+Hospital+Jalna" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                      Government B.Sc. Nursing College, General Hospital Jalna, Opposite Collector Office, Jalna, Pin &ndash; 431203, Maharashtra
+                    </a>
                   </div>
                 </div>
               </div>
@@ -917,7 +920,7 @@
                 <div>
                   <div class="contact-item-title">Official Email</div>
                   <div class="contact-item-val">
-                    <a href="mailto:govt.bscnursingjalna@gmail.com" style="color: inherit; text-decoration: underline;">
+                    <a href="mailto:govt.bscnursingjalna@gmail.com" style="color: var(--primary); font-weight: 600; text-decoration: none;">
                       govt.bscnursingjalna@gmail.com
                     </a>
                   </div>
@@ -934,9 +937,9 @@
                 <div>
                   <div class="contact-item-title">Telephone &amp; Mobile</div>
                   <div class="contact-item-val">
-                    02482-299160 (Landline)
+                    <a href="tel:02482299160" style="color: inherit; text-decoration: none; font-weight: 600;">02482-299160</a> <span style="font-size: 0.85em; color: var(--text-muted);">(Landline)</span>
                     <br>
-                    7588348681 &middot; 9011349953
+                    <a href="tel:+917588348681" style="color: var(--primary); text-decoration: none; font-weight: 600;">7588348681</a> &middot; <a href="tel:+919011349953" style="color: var(--primary); text-decoration: none; font-weight: 600;">9011349953</a>
                   </div>
                 </div>
               </div>
@@ -1002,6 +1005,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <button id="back-to-top" class="floating-back-to-top" aria-label="Scroll back to top" title="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"></path>
+    </svg>
+  </button>
 
   <!-- Scripts -->
   <script src="assets/js/portfolio-data.js"></script>
