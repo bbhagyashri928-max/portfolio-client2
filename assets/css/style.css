@@ -592,8 +592,9 @@ body.menu-open {
 
 .hero-sunburst-badge {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  bottom: -20px;
+  right: -15px;
+  top: auto;
   background: #FFFFFF;
   padding: 12px 18px;
   border-radius: var(--radius-md);
@@ -603,7 +604,7 @@ body.menu-open {
   align-items: center;
   gap: 12px;
   animation: floatGentle 5s ease-in-out infinite;
-  z-index: 2;
+  z-index: 3;
 }
 
 .sunburst-icon-wrap {
@@ -647,8 +648,9 @@ body.menu-open {
 
 .doodle-cap {
   position: absolute;
-  bottom: -20px;
-  right: 15px;
+  top: -20px;
+  right: 25px;
+  bottom: auto;
   width: 56px;
   height: 56px;
   color: var(--primary);
@@ -1863,15 +1865,18 @@ body.menu-open {
   }
 
   .hero-sunburst-badge {
-    top: -8px;
-    right: 0;
-    transform: scale(0.86);
-    transform-origin: top right;
+    top: auto;
+    bottom: -15px;
+    right: 10px;
+    transform: scale(0.88);
+    transform-origin: bottom right;
+    animation: none;
   }
 
   .doodle-cap {
-    bottom: -10px;
-    right: 8px;
+    top: -12px;
+    bottom: auto;
+    right: 18px;
     transform: scale(0.85);
   }
 
@@ -2018,15 +2023,19 @@ body.menu-open {
   }
 
   .hero-sunburst-badge {
+    top: auto;
+    bottom: -14px;
+    right: 6px;
     transform: scale(0.82);
-    top: -10px;
-    right: -5px;
+    transform-origin: bottom right;
+    animation: none;
   }
 
   .doodle-cap {
+    top: -10px;
+    bottom: auto;
+    right: 15px;
     transform: scale(0.75);
-    bottom: -8px;
-    right: 5px;
   }
 
   .message-profile-card {
@@ -2170,7 +2179,13 @@ body.menu-open {
   }
 
   .hero-sunburst-badge {
-    display: none;
+    top: auto;
+    bottom: -12px;
+    right: 4px;
+    transform: scale(0.76);
+    transform-origin: bottom right;
+    display: flex;
+    animation: none;
   }
 
   .circle-card-vision,
